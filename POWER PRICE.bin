@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>POWER PRICE</title>
+
+<style>
+
+body{
+background:#050505;
+font-family:Arial;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+/* красные линии */
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: repeating-linear-gradient(
+90deg,
+rgba(255,0,0,0.08) 0px,
+rgba(255,0,0,0.08) 2px,
+transparent 2px,
+transparent 80px
+);
+animation:moveLines 6s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveLines{
+from{transform:translateX(0);}
+to{transform:translateX(80px);}
+}
+
+.title{
+font-size:70px;
+margin-top:60px;
+color:#ff1a1a;
+text-shadow:0 0 10px #ff0000,0 0 25px #ff0000,0 0 50px #ff0000;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px #ff0000;}
+to{ text-shadow:0 0 40px #ff0000,0 0 70px #ff0000;}
+}
+
+.box{
+background:#121212;
+width:520px;
+margin:50px auto;
+padding:40px;
+border-radius:20px;
+box-shadow:0 0 35px rgba(255,0,0,0.5);
+line-height:2;
+font-size:20px;
+}
+
+.line{
+transition:0.3s;
+}
+
+.line:hover{
+color:#ff3b3b;
+transform:scale(1.05);
+text-shadow:0 0 15px #ff0000;
+}
+
+.cpp{
+color:#ff3b3b;
+font-weight:bold;
+text-shadow:0 0 10px #ff0000;
+}
+
+/* кнопка BUY */
+
+.buy-btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+font-size:20px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+border-radius:12px;
+background:#ff0000;
+box-shadow:0 0 15px #ff0000,0 0 35px #ff0000;
+transition:0.3s;
+animation:pulse 2s infinite;
+}
+
+.buy-btn:hover{
+transform:scale(1.1);
+box-shadow:0 0 30px #ff0000,0 0 60px #ff0000;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 10px #ff0000;}
+50%{box-shadow:0 0 35px #ff0000;}
+100%{box-shadow:0 0 10px #ff0000;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title">POWER PRICE</div>
+
+<div class="box">
+
+<div class="line">туторы как делать свой софт-700₽</div>
+<div class="line">купить личный софт-1200₽</div>
+<div class="line">помощь когда купил туторы-300₽</div>
+<div class="line">и прошу не путать туторы с <span class="cpp">обучением C++</span></div>
+<div class="line">сурс-1400₽</div>
+<div class="line">и так же при покупке обучения я не обязан давать что либо</div>
+<div class="line">так же я не несу ответственность если у вас что-то не получилось</div>
+<div class="line">возвраты не делаю!</div>
+
+<a class="buy-btn" href="https://t.me/powerlayhub" target="_blank">BUY</a>
+
+</div>
+
+</body>
+</html>
